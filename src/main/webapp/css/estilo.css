@@ -1,0 +1,379 @@
+:root {
+	--azulEscuro: #0f1f4d;
+	--azulEscuroClaro: #1b2f6b;
+	--roxo: #7c3aed;
+	--roxoEscuro: #5b21b6;
+	--roxoSuave: rgba(124, 58, 237, 0.08);
+	--branco: #ffffff;
+	--raio: 12px;
+	--sombra: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 40px 20px;
+	min-height: 100vh;
+	font-family: "Segoe UI", Arial, sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+	color: var(--azulEscuro);
+	background: linear-gradient(160deg, var(--azulEscuro) 0%, var(--azulEscuroClaro) 100%);
+}
+
+.caixaPrincipal {
+	max-width: 880px;
+	margin: 0 auto;
+	padding: 36px 40px;
+	background-color: var(--branco);
+	border-radius: var(--raio);
+	border-top: 6px solid var(--roxo);
+	box-shadow: var(--sombra);
+}
+
+.caixaLogin {
+	max-width: 420px;
+}
+
+h1, h2 {
+	margin: 0 0 16px 0;
+	color: var(--azulEscuro);
+}
+
+h1 {
+	font-size: 28px;
+	padding-bottom: 12px;
+	border-bottom: 3px solid var(--roxo);
+	display: inline-block;
+}
+
+h2 {
+	font-size: 20px;
+	margin-top: 28px;
+}
+
+.tituloCentral {
+	text-align: center;
+	display: block;
+	border-bottom: none;
+	color: var(--roxo);
+	letter-spacing: 1px;
+}
+
+.subtitulo {
+	margin: 0 0 24px 0;
+	color: var(--azulEscuroClaro);
+}
+
+a {
+	color: var(--roxo);
+	text-decoration: none;
+	font-weight: 600;
+}
+
+a:hover {
+	color: var(--roxoEscuro);
+	text-decoration: underline;
+}
+
+.formulario {
+	margin: 20px 0;
+}
+
+.formulario label {
+	display: block;
+	margin-bottom: 6px;
+	font-weight: 600;
+	color: var(--azulEscuro);
+}
+
+.formulario input:not([type="hidden"]),
+.formulario select,
+.formulario textarea {
+	display: block;
+	width: 100%;
+	margin-bottom: 18px;
+	padding: 11px 14px;
+	font-family: inherit;
+	font-size: 15px;
+	color: var(--azulEscuro);
+	background-color: var(--branco);
+	border: 2px solid var(--azulEscuro);
+	border-radius: 8px;
+	outline: none;
+	transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.formulario input:focus,
+.formulario select:focus,
+.formulario textarea:focus {
+	border-color: var(--roxo);
+	box-shadow: 0 0 0 4px rgba(124, 58, 237, 0.2);
+}
+
+.botao {
+	display: inline-block;
+	padding: 11px 24px;
+	font-family: inherit;
+	font-size: 15px;
+	font-weight: 600;
+	color: var(--branco);
+	background-color: var(--roxo);
+	border: 2px solid var(--roxo);
+	border-radius: 8px;
+	cursor: pointer;
+	text-decoration: none;
+	transition: background-color 0.2s, transform 0.1s;
+}
+
+.botao:hover {
+	background-color: var(--roxoEscuro);
+	border-color: var(--roxoEscuro);
+	color: var(--branco);
+	text-decoration: none;
+}
+
+.botao:active {
+	transform: translateY(1px);
+}
+
+.botaoCheio {
+	width: 100%;
+}
+
+.botaoSecundario {
+	color: var(--azulEscuro);
+	background-color: var(--branco);
+	border-color: var(--azulEscuro);
+}
+
+.botaoSecundario:hover {
+	color: var(--branco);
+	background-color: var(--azulEscuro);
+	border-color: var(--azulEscuro);
+}
+
+.barraAcoes {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px;
+	margin: 16px 0 8px 0;
+}
+
+.linkVoltar {
+	display: inline-block;
+	margin-top: 8px;
+}
+
+.mensagemErro {
+	margin: 16px 0;
+	padding: 12px 16px;
+	color: var(--branco);
+	background-color: var(--azulEscuro);
+	border-left: 5px solid var(--roxo);
+	border-radius: 8px;
+}
+
+.textoErro {
+	margin: 16px 0 24px 0;
+	padding: 14px 16px;
+	background-color: var(--roxoSuave);
+	border-left: 5px solid var(--roxo);
+	border-radius: 8px;
+}
+
+.menuLista {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 14px;
+}
+
+.menuLista li a {
+	display: block;
+	padding: 16px 18px;
+	color: var(--azulEscuro);
+	background-color: var(--branco);
+	border: 2px solid var(--azulEscuro);
+	border-radius: 10px;
+	transition: all 0.2s;
+}
+
+.menuLista li a:hover {
+	color: var(--branco);
+	background-color: var(--roxo);
+	border-color: var(--roxo);
+	text-decoration: none;
+	transform: translateY(-2px);
+}
+
+.tabelaRolagem {
+	overflow-x: auto;
+}
+
+.tabela {
+	width: 100%;
+	margin-top: 12px;
+	border-collapse: collapse;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.tabela th {
+	padding: 12px 14px;
+	text-align: left;
+	color: var(--branco);
+	background-color: var(--azulEscuro);
+	font-weight: 600;
+}
+
+.tabela td {
+	padding: 12px 14px;
+	text-align: left;
+	border-bottom: 1px solid rgba(15, 31, 77, 0.15);
+}
+
+.tabela tbody tr:nth-child(even) {
+	background-color: var(--roxoSuave);
+}
+
+.tabela tbody tr:hover {
+	background-color: rgba(124, 58, 237, 0.16);
+}
+
+.colunaAcoes {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 14px;
+}
+
+.linkExcluir {
+	color: var(--azulEscuro);
+}
+
+.linkExcluir:hover {
+	color: var(--roxoEscuro);
+}
+
+.etiqueta {
+	display: inline-block;
+	padding: 3px 12px;
+	font-size: 13px;
+	font-weight: 600;
+	border-radius: 999px;
+}
+
+.etiquetaAtiva {
+	color: var(--branco);
+	background-color: var(--roxo);
+}
+
+.etiquetaInativa {
+	color: var(--azulEscuro);
+	background-color: var(--branco);
+	border: 1px solid var(--azulEscuro);
+}
+
+.etiqueta-ABERTA {
+	color: var(--azulEscuro);
+	background-color: var(--branco);
+	border: 1px solid var(--azulEscuro);
+}
+
+.etiqueta-EM_ANDAMENTO {
+	color: var(--branco);
+	background-color: var(--roxo);
+}
+
+.etiqueta-AGUARDANDO_RESPOSTA {
+	color: var(--roxoEscuro);
+	background-color: var(--roxoSuave);
+	border: 1px solid var(--roxo);
+}
+
+.etiqueta-FINALIZADA {
+	color: var(--branco);
+	background-color: var(--azulEscuro);
+}
+
+.dadosChamado {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+	gap: 12px 24px;
+	margin: 12px 0 8px 0;
+}
+
+.dadosChamado > div > span:first-child {
+	display: block;
+	font-size: 12px;
+	font-weight: 600;
+	color: var(--azulEscuroClaro);
+	text-transform: uppercase;
+}
+
+.textoPreservado {
+	white-space: pre-wrap;
+	overflow-wrap: anywhere;
+}
+
+.chat {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	margin: 12px 0 20px 0;
+}
+
+.mensagem {
+	max-width: 75%;
+	padding: 10px 14px;
+	border-radius: 12px;
+	white-space: pre-wrap;
+	overflow-wrap: anywhere;
+}
+
+.mensagemAutor {
+	display: block;
+	margin-bottom: 4px;
+	font-size: 12px;
+	font-weight: 600;
+	opacity: 0.8;
+}
+
+.mensagemMinha {
+	align-self: flex-end;
+	color: var(--branco);
+	background-color: var(--roxo);
+}
+
+.mensagemOutra {
+	align-self: flex-start;
+	background-color: var(--roxoSuave);
+	border: 1px solid rgba(124, 58, 237, 0.25);
+}
+
+.textoVazio {
+	margin-top: 16px;
+	color: var(--azulEscuroClaro);
+	font-style: italic;
+}
+
+@media (max-width: 600px) {
+	body {
+		padding: 20px 12px;
+	}
+
+	.caixaPrincipal {
+		padding: 24px 20px;
+	}
+
+	.tabela th,
+	.tabela td {
+		padding: 10px 8px;
+		font-size: 14px;
+	}
+}
